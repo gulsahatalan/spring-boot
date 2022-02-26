@@ -40,7 +40,7 @@ public class Main {
         int childWorkerTotalSalary=findRepetetion(randomWorkerList,"childWorker")* childWorker.salary();
 
         int totalSalary= goodWorkerTotalSalary+disabledTotalSalary+lazyWorkerTotalSalary+childWorkerTotalSalary;
-            //    findRepetetion(randomWorkerList,"goodWorker")* goodWorker.salary() + findRepetetion(randomWorkerList,"disabledWorker")* disabledWorker.salary()+findRepetetion(randomWorkerList,"lazyWorker")* lazyWorker.salary()+findRepetetion(randomWorkerList,"childWorker")* childWorker.salary();
+           
         System.out.println("total salary =   "+totalSalary +" Chf");
     }
 
