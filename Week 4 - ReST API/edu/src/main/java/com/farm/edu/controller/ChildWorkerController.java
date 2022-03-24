@@ -60,6 +60,7 @@ public class ChildWorkerController {
             @RequestBody ChildWorkerEntity childWorkerEntity
     ){
         childWorkerEntity.setWorkHour(childWorkerEntity.getWorkHour());
+        this.childWorkerService.save(childWorkerEntity);
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(childWorkerEntity);

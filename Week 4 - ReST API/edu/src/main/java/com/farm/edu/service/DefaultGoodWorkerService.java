@@ -40,8 +40,7 @@ public class DefaultGoodWorkerService implements GoodWorkerService {
     @Override
     public GoodWorkerEntity save(GoodWorkerEntity goodWorkerModel) {
         return this.goodWorkerRepository
-                .save(new GoodWorkerEntity(
-                        goodWorkerModel.getWorkHour()));}
+                .save(goodWorkerModel);}
 
     @Override
     public void setWorkHour(int workHour) {}

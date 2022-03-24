@@ -43,8 +43,7 @@ public class DefaultChildWorkerService implements ChildWorkerService{
     @Override
     public ChildWorkerEntity save(ChildWorkerEntity childWorkerModel) {
         return this.childWorkerRepository
-                .save(new ChildWorkerEntity(
-                        childWorkerModel.getWorkHour()));}
+                .save(childWorkerModel);}
 
     @Override
     public void setWorkHour(int workHour) {

@@ -60,6 +60,7 @@ public class LazyWorkerController {
             @RequestBody LazyWorkerEntity lazyWorkerEntity
     ){
         lazyWorkerEntity.setWorkHour(lazyWorkerEntity.getWorkHour());
+        this.lazyWorkerService.save(lazyWorkerEntity);
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(lazyWorkerEntity);

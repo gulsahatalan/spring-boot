@@ -42,8 +42,7 @@ public class DefaultDisabledWorkerService implements DisabledWorkerService {
     @Override
     public DisabledWorkerEntity save(DisabledWorkerEntity disabledWorkerModel) {
         return this.disabledWorkerRepository
-                .save(new DisabledWorkerEntity(
-                        disabledWorkerModel.getWorkHour()));}
+                .save(disabledWorkerModel);}
 
     @Override
     public void setWorkHour(int workHour) {

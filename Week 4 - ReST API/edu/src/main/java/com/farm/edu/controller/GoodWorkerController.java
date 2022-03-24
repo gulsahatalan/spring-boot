@@ -60,6 +60,7 @@ public class GoodWorkerController {
             @RequestBody GoodWorkerEntity goodWorkerEntity
     ){
         goodWorkerEntity.setWorkHour(goodWorkerEntity.getWorkHour());
+        this.goodWorkerService.save(goodWorkerEntity);
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(goodWorkerEntity);

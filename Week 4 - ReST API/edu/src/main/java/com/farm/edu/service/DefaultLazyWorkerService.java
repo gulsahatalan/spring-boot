@@ -40,8 +40,7 @@ public class DefaultLazyWorkerService implements LazyWorkerService  {
     @Override
     public LazyWorkerEntity save(LazyWorkerEntity lazyWorkerModel) {
         return this.lazyWorkerRepository
-                .save(new LazyWorkerEntity(
-                        lazyWorkerModel.getWorkHour()));}
+                .save(lazyWorkerModel);}
 
     @Override
     public void setWorkHour(int workHour) {

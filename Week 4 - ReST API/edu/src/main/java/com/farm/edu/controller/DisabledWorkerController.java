@@ -60,6 +60,7 @@ public class DisabledWorkerController {
             @RequestBody DisabledWorkerEntity disabledWorkerEntity
     ){
         disabledWorkerEntity.setWorkHour(disabledWorkerEntity.getWorkHour());
+        this.disabledWorkerService.save(disabledWorkerEntity);
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(disabledWorkerEntity);
